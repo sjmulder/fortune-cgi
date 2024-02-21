@@ -6,7 +6,7 @@
 #include <err.h>
 #include <sqlite3.h>
 
-#define MAX_FORTUNE	512
+#define MAX_FORTUNE	4096
 
 static const char *
 read_fortune(FILE *fin)
