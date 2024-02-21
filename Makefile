@@ -11,7 +11,7 @@ progs:
 	${MAKE} -C fortune-to-db
 	${MAKE} -C fortune-cgi
 
-fortune.db:
+fortune.db: fortune-to-db/fortune-to-db ${FORTUNE_FILE}
 	fortune-to-db/fortune-to-db ${FORTUNE_FILE} fortune.db
 
 .PHONY: all progs
