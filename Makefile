@@ -1,3 +1,5 @@
+FORTUNE_FILE?=	/usr/share/games/fortune*/fortunes
+
 all: progs fortune.db
 
 clean:
@@ -10,6 +12,6 @@ progs:
 	${MAKE} -C fortune-cgi
 
 fortune.db:
-	fortune-to-db/fortune-to-db /usr/share/games/fortunes/fortunes fortune.db
+	fortune-to-db/fortune-to-db ${FORTUNE_FILE} fortune.db
 
 .PHONY: all progs
