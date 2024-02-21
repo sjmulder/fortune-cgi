@@ -1,6 +1,6 @@
 fortune.cgi
 ===========
-Serverless [fortune(1)](https://man.openbsd.org/fortune) microservice.
+Serverless [fortune(6)](https://man.openbsd.org/fortune) microservice.
 
 Example
 -------
