@@ -1,5 +1,10 @@
-CFLAGS+=	-Wall -Wextra
-LDLIBS+=	-lsqlite3 -lyajl
+PKGS=		yajl sqlite3
+
+CFLAGS.pkg!=	pkg-config --cflags ${PKGS}
+LDLIBS.pkg!=	pkg-config --libs ${PKGS}
+
+CFLAGS+=	${CFLAGS.pkg} -Wall -Wextra
+LDLIBS+=	${LDLIBS.pkg}
 
 all: fortune.cgi
 
