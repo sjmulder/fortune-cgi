@@ -4,7 +4,7 @@ Serverless [fortune(6)](https://man.openbsd.org/fortune) microservice.
 
 Example
 -------
-    $ ./fortune-cgi/fortune.cgi  # or
+    $ ./fortune-cgi/fortune.cgi
     Content-Type: text/json
     
     {
