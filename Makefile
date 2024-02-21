@@ -3,8 +3,8 @@ FORTUNE_FILE?=	/usr/share/games/fortune*/fortunes
 all: progs fortune.db
 
 clean:
-	${MAKE} -C fortune-to-db
-	${MAKE} -C fortune-cgi
+	${MAKE} -C fortune-to-db clean
+	${MAKE} -C fortune-cgi clean
 	rm -f fortune.db
 
 progs:
