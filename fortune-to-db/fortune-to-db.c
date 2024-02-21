@@ -40,9 +40,9 @@ static void
 init_schema(sqlite3 *db)
 {
 	static const char sql[] =
-"CREATE TABLE IF NOT EXISTS fortunes ("
-"  id INTEGER PRIMARY KEY,"
-"  fortune TEXT NOT NULL"
+"create table if not exists fortunes ("
+"  id integer primary key,"
+"  fortune text not null"
 ")";
 
 	sqlite3_stmt *stmt;
