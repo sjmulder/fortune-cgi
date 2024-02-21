@@ -1,3 +1,4 @@
 *.swp
 fortune-to-db/fortune-to-db
+fortune-cgi/fortune.cgi
 fortune.db
