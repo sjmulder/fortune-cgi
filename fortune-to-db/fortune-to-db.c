@@ -115,10 +115,17 @@ main(int argc, char **argv)
 	
 	init_schema(db);
 	insert = prep_insert(db);
+
+	if (sqlite3_exec(db, "begin transaction", NULL, NULL, NULL)
+	    != SQLITE_OK)
+		errx(1, "%s: %s", db_path, sqlite3_errstr(res));
 	
 	for (count=0; (fortune = read_fortune(fin)); count++)
 		insert_fortune(db, insert, fortune);
-	
+
+	if (sqlite3_exec(db, "commit", NULL, NULL, NULL) != SQLITE_OK)
+		errx(1, "%s: %s", db_path, sqlite3_errstr(res));
+
 	printf("inserted %zu fortunes\n", count);
 
 	if (sqlite3_finalize(insert) != SQLITE_OK)
