@@ -15,4 +15,4 @@ fortune.db: fortune-to-db/fortune-to-db ${FORTUNE_FILE}
 	rm -f fortune.db  # replace, don't append
 	fortune-to-db/fortune-to-db ${FORTUNE_FILE} fortune.db
 
-.PHONY: all progs
+.PHONY: all clean progs
